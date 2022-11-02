@@ -2,4 +2,8 @@ extends layout
 
 block content
   h1= title
-  
+  - var results = [{"roomName": "Hall", "roomNumber": 01, "roomShape": "Cuboid"}, {"roomName": "Bedroom", "roomNumber": 02, "roomShape": "Cube"}, {"roomName": "Kitchen", "roomNumber": 03, "roomShape": "Cone"}]
+    div(class = 'container-fluid')
+      div(class = 'row')
+        each item in results 
+          div(class="col-sm-2")  roomName : #{item["roomName"]} <br> roomNumber : #{item["roomNumber"]} <br> roomShape: #{item["roomShape"]}
